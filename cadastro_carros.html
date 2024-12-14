@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="trab.css">
+    <title>Cadastro de Carros</title>
+</head>
+<body>
+    <div class="form-container">
+        <h1>Cadastro de Carros</h1>
+        <form action="salvar_carros.php" method="post">
+            <label for="marca">Marca:</label>
+            <input type="text" id="marca" name="marca" placeholder="Ex.: Ford" required>
+
+            <label for="modelo">Modelo:</label>
+            <input type="text" id="modelo" name="modelo" placeholder="Ex.: Fiesta" required>
+
+            <label for="ano">Ano:</label>
+            <input type="number" id="ano" name="ano" placeholder="Ex.: 2024" required>
+
+            <label for="cor">Cor:</label>
+            <input type="text" id="cor" name="cor" placeholder="Ex.: Prata" required>
+
+            <label for="chassi">Chassi:</label>
+            <input type="text" id="chassi" name="chassi" placeholder="Número único" required>
+
+            <label for="preco">Preço (R$):</label>
+            <input type="number" step="0.01" id="preco" name="preco" placeholder="Ex.: 45000.00" required>
+
+            <label for="status">Status:</label>
+            <select id="status" name="status" required>
+                <option value="EM ESTOQUE">Em Estoque</option>
+                <option value="VENDIDO">Vendido</option>
+            </select>
+
+            <button type="submit">Salvar Carro</button>
+        </form>
+    </div>
