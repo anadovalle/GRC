@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="formulario.css">
+    <title>Cadastro de Vendas</title>
+</head>
+
+<body>
+    <div class="form-container">
+        <h1>Cadastro de Vendas</h1>
+        <form action="salvar_venda.php" method="POST">
+
+            <label for="cliente">Cliente:</label>
+            <select name="cliente_id" id="cliente" required>
+                <?php 
+                include 'config/database.php';
+                $clientes = $pdo->query("SELECT id, nome FROM clientes");
+                foreach ($clientes as $cliente) {
+                    echo "<option value='cliente'id'>Nome</option>";
+            </select>
+
+            <label for="carro">Carro (Em Estoque):</label>
+            <select name="carro_id" id="carro" required>
+                <?php 
+                $carros = $pdo->query("SELECT id, marca, modelo FROM carros WHERE status = 'EM ESTOQUE'");
+                foreach ($carros as $carro) {
+                    echo "<option value='carro'id'>marca / modelo</option>";
+                }
+                ?>
+            </select>
+
+            <label for="vendedor">Vendedor:</label>
+            <select name="vendedor_id" id="vendedor" required>
+                <?php 
+                $vendedores = $pdo->query("SELECT id, nome FROM vendedores");
+                foreach ($vendedores as $vendedor) {
+                    echo "<option value='vendedor' id> Nome Vendedor </option>";
+                }
+                ?>
+            </select>
+
+            <label for="data_venda">Data da Venda:</label>
+            <input type="date" id="data_venda" name="data_venda" required>
+
+            <label for="valor">Valor (R$):</label>
+            <input type="number" id="valor" name="valor" step="0.01" required>
+
+            <button type="submit">Registrar Venda</button>
+        </form>
+    </div>
+</body>
+
+</html>
