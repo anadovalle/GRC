@@ -11,7 +11,7 @@
         <h1>Cadastro de Clientes</h1>
         <form action="salvar_clientes.php" method="post">
             <label for="nome">Nome Completo:</label>
-            <input type="text" id="nome" name="endereco" required>
+            <input type="text" id="nome" name="nome" required>
 
             <label for="endereco">Endereço:</label>
             <input type="text" name="endereco" id="endereco" required>
@@ -19,11 +19,8 @@
             <label for="telefone" >Telefone:</label>
             <input type="text" id="telefone" name="telefone" placeholder="(xx) xxxx-xxxx" required>
 
-            <label for="gmail">Egmail:</label>
-            <input type="gmail" id="gmail" name="gmail" required>
-
-            <label for="historico">historico de Compras:</label>
-            <textarea id="historico" name="historico" rows="3" placeholder="Deixe em branco para novos Clientes"></textarea>
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
 
             <button type="submit">Salvar</button>
         </form>

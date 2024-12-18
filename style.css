@@ -1,0 +1,127 @@
+body {
+    background: rgb(2,0,36);
+    background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(74,0,0,1) 0%, rgba(0,0,0,1) 100%);
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+    }
+
+
+h1{
+    margin: 0;
+    padding: 0;
+}
+
+
+body, button, input, textarea {
+    font-family: 'Roboto', sans-serif;
+}
+
+form {
+    margin: 0 auto;
+    width: 400px;
+    padding: 1em;
+/* border: 1px solid #ccc;*/
+    /*border-radius: 20px;*/
+}
+
+
+.text-documentation label {
+    display: inline-block;
+    width: 400px;
+    text-align: right;
+}
+
+
+.text-documentation input{
+    width: 400px;
+    height: 50px;
+    -moz-boz-sizing: border-box;
+    box-sizing: border-box;
+    border-radius: 12px;
+    border: 1px solid transparent;
+    background-color: rgba(255, 255, 255, 0.1);
+    transition: background 0.4s;
+    color: #fff;
+}
+
+.date-nasc label {
+    display: inline-block;
+    width: 400px;
+    text-align: right;
+}
+
+.date-nasc input{
+    width: 400px;
+    height: 50px;
+    -moz-boz-sizing: border-box;
+    box-sizing: border-box;
+    border-radius: 12px;
+    border: 1px solid transparent;
+    background-color: rgba(255, 255, 255, 0.1);
+    transition: background 0.4s;
+    color: #fff;
+}
+
+button{
+    width: 400px;
+    height: 50px;
+    -moz-boz-sizing: border-box;
+    box-sizing: border-box;
+    border-radius: 55px;
+    border: 2px solid transparent;
+    background-color: rgba(255,99,71);
+    color: #fff;
+}
+
+button:hover {
+    background: rgba(255,0,0);
+    transition: background 0.4s;
+}
+
+input:hover,
+input:focus,
+textarea:hover,
+textarea:focus {
+    outline: none;
+    border-color: rgba(255,99,71);
+    background-color: rgba(54,54,54);
+}
+
+textarea{
+    width: 400px;
+    height: 140px;
+    -moz-boz-sizing: border-box;
+    box-sizing: border-box;
+    resize: vertical;
+    border-radius: 12px;
+    transition: background 0.4s;
+    border: 2px solid transparent;
+    background-color: rgba(255,99,71);
+    color: #fff;
+}
+
+.gender-title{
+    font-size: 12px;
+    justify-content: center;
+}
+
+.gender-group{
+    display: flex;
+    justify-content: space-between;
+    margin: 12px;
+    padding: 2px;
+}
+
+.gerder.input{
+    display: flex;
+    align-items: center;
+    
+}
